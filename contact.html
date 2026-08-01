@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Script It Up — tell us about your project and we'll get back to you with a clear plan and estimate.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0F172A">
+    <meta name="color-scheme" content="light">
+
+    <title>Contact — Script It Up</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="shortcut icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="canonical" href="https://scriptitup.github.io/contact.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Script It Up">
+    <meta property="og:title" content="Contact — Script It Up">
+    <meta property="og:description" content="Tell us about your project and we'll get back to you with a clear plan and estimate.">
+    <meta property="og:url" content="https://scriptitup.github.io/contact.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header" id="site-header">
+        <nav class="nav container" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="Script It Up home">
+                <img class="brand-logo" src="assets/logo-mark.png" alt="" width="36" height="36">
+                <span class="brand-name">Script It Up</span>
+            </a>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a class="nav-link" href="index.html#home">Home</a></li>
+                <li><a class="nav-link" href="index.html#services">Services</a></li>
+                <li><a class="nav-link" href="index.html#about">About</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+                <li><a class="btn btn-primary nav-cta-mobile" href="contact.html">Start a Project</a></li>
+            </ul>
+
+            <a class="btn btn-primary nav-cta" href="contact.html">Start a Project</a>
+
+            <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+                <span class="nav-toggle-bar"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="page-hero">
+            <div class="container">
+                <p class="eyebrow reveal">Contact</p>
+                <h1 class="page-title reveal">Let's build something great.</h1>
+                <p class="page-lead reveal">Tell us about your project and we'll get back to you with a clear plan and estimate. Whether it's a website, an app, or an AI workflow — we'd love to hear from you.</p>
+            </div>
+        </section>
+
+        <section class="page-contact">
+            <div class="container contact-grid">
+                <div class="contact-intro">
+                    <p class="contact-email reveal">
+                        <a href="mailto:hello@scriptitup.io">hello@scriptitup.io</a>
+                        <span class="contact-note">— we reply within one business day</span>
+                    </p>
+                    <ul class="contact-socials reveal">
+                        <li><a href="https://github.com/scriptitup" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <form id="contact-form" class="contact-form reveal" novalidate>
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="field">
+                            <label for="phone">Phone (optional)</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+1 555 000 0000">
+                        </div>
+
+                        <div class="field">
+                            <label for="service">Service needed</label>
+                            <input type="text" id="service" name="service" placeholder="Website, SaaS, AI, Automation...">
+                        </div>
+                    </div>
+
+                    <div class="field">
+                        <label for="budget">Budget</label>
+                        <input type="text" id="budget" name="budget" placeholder="e.g. $1k – $5k">
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="btn btn-primary btn-block">Send</button>
+                    <p id="status" class="status" role="status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-team-head">
+                <p class="eyebrow">Team</p>
+                <h2 class="footer-team-title">Meet the Team</h2>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <h3 class="team-name">Om Srivastava</h3>
+                    <ul class="team-links">
+                        <li><a href="https://github.com/Om-Srivastava-6" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/om-srivastava-6a209429b/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://om-srivastava-6.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="team-member">
+                    <h3 class="team-name">Aditya Mishra</h3>
+                    <ul class="team-links">
+                        <li><a href="https://github.com/AdityaMishra2007-codes" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/adityamishra2006/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://adityamishra2007-codes.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                    </ul>
+                </div>
+
+                <div class="team-member">
+                    <h3 class="team-name">Roshan Mallick</h3>
+                    <ul class="team-links">
+                        <li><a href="https://github.com/Roshan-Mallick" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/roshan-mallick-2b816a2b8/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://roshan-mallick.github.io/" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span id="year">2026</span> Script It Up</p>
+                <ul class="footer-legal">
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
