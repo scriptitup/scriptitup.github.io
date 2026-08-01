@@ -50,3 +50,91 @@ function showStatus(text, type) {
     statusEl.textContent = text;
     statusEl.className = "status" + (type ? " " + type : "");
 }
+
+/* ============================================================
+   UI Enhancements
+   ============================================================ */
+
+/* Sticky header state */
+const header = document.getElementById("site-header");
+
+function updateHeader() {
+    header.classList.toggle("scrolled", window.scrollY > 10);
+}
+
+window.addEventListener("scroll", updateHeader, { passive: true });
+updateHeader();
+
+/* Mobile navigation */
+const navToggle = document.getElementById("nav-toggle");
+const navLinks = document.getElementById("nav-links");
+
+function closeMenu() {
+    navLinks.classList.remove("open");
+    navToggle.setAttribute("aria-expanded", "false");
+}
+
+navToggle.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    navToggle.setAttribute("aria-expanded", String(open));
+});
+
+navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+});
+
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeMenu();
+    }
+});
+
+/* Scroll reveal animations */
+const revealEls = document.querySelectorAll(".reveal");
+
+function revealAll() {
+    revealEls.forEach((el) => el.classList.add("in-view"));
+}
+
+if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in-view");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    revealEls.forEach((el) => revealObserver.observe(el));
+} else {
+    revealAll();
+}
+
+/* Scrollspy — highlight active nav link */
+const sectionEls = document.querySelectorAll("main section[id]");
+const navLinkEls = document.querySelectorAll(".nav-link");
+
+const spyObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                navLinkEls.forEach((link) => {
+                    link.classList.toggle("active", link.getAttribute("href") === "#" + entry.target.id);
+                });
+            }
+        });
+    },
+    { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+);
+
+sectionEls.forEach((section) => spyObserver.observe(section));
+
+/* Footer year */
+const yearEl = document.getElementById("year");
+if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+}
