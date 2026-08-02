@@ -56,6 +56,7 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-h) + 12px);
     -webkit-text-size-adjust: 100%;
+    overflow-x: clip;
 }
 
 body {
@@ -261,6 +262,7 @@ p {
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
+    min-width: 0;
 }
 
 .brand {
@@ -271,6 +273,14 @@ p {
     font-size: 1.02rem;
     letter-spacing: -0.02em;
     color: var(--ink);
+    min-width: 0;
+}
+
+.brand-name {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
 }
 
 .brand-logo {
