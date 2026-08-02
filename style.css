@@ -335,21 +335,32 @@ p {
     display: none;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 5px;
     width: 44px;
     height: 44px;
     padding: 10px;
+    flex-shrink: 0;
+    z-index: 300;
     border-radius: var(--radius);
     border: 1px solid var(--border);
     background: var(--bg);
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.nav-toggle:hover {
+    background: var(--bg-soft);
+    border-color: var(--faint);
 }
 
 .nav-toggle-bar {
     display: block;
-    height: 2px;
+    height: 2.5px;
     width: 100%;
     background: var(--ink);
-    border-radius: 2px;
+    border-radius: 2.5px;
     transition: transform 0.25s var(--ease), opacity 0.2s;
 }
 
@@ -1249,6 +1260,7 @@ p {
 
     .nav-toggle {
         display: flex;
+        margin-left: auto;
     }
 
     .nav-links {
