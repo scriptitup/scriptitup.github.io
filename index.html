@@ -117,6 +117,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="chat/chat.css">
     <noscript><style>.reveal{opacity:1;transform:none}</style></noscript>
 </head>
 <body>
@@ -502,5 +503,60 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- Chat widget (UI only) -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-panel" id="chat-panel" role="dialog" aria-label="Script It Up chat assistant" aria-hidden="true">
+            <header class="chat-header">
+                <div class="chat-header-avatar">
+                    <img src="assets/logo-mark.png" alt="">
+                </div>
+                <div class="chat-header-info">
+                    <span class="chat-header-name">Script It Up Assistant</span>
+                    <span class="chat-header-status"><span class="status-dot"></span> Online</span>
+                </div>
+                <button class="chat-close" id="chat-close" type="button" aria-label="Close chat">&times;</button>
+            </header>
+
+            <div class="chat-body" id="chat-body">
+                <div class="chat-msg chat-msg-bot">
+                    <div class="chat-msg-avatar">
+                        <img src="assets/logo-mark.png" alt="">
+                    </div>
+                    <div class="chat-bubble">Hi! I'm the Script It Up assistant. Ask me about our services, process, or pricing — or start a project with us.</div>
+                </div>
+                <div class="chat-msg chat-msg-user">
+                    <div class="chat-bubble">What services do you offer?</div>
+                </div>
+                <div class="chat-msg chat-msg-bot">
+                    <div class="chat-msg-avatar">
+                        <img src="assets/logo-mark.png" alt="">
+                    </div>
+                    <div class="chat-bubble">We build modern websites, full-stack applications, SaaS platforms, AI solutions, automation systems, and UI/UX design.</div>
+                </div>
+            </div>
+
+            <div class="chat-suggestions">
+                <button class="chat-chip" type="button">Services</button>
+                <button class="chat-chip" type="button">Pricing</button>
+                <button class="chat-chip" type="button">Get a quote</button>
+            </div>
+
+            <form class="chat-form" id="chat-form">
+                <input class="chat-input" id="chat-input" type="text" placeholder="Ask about Script It Up..." autocomplete="off" aria-label="Your message">
+                <button class="chat-send" type="submit" aria-label="Send message">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+                </button>
+            </form>
+        </div>
+
+        <button class="chat-launcher" id="chat-launcher" type="button" aria-label="Open chat" aria-expanded="false" aria-controls="chat-panel">
+            <span class="chat-launcher-pulse"></span>
+            <svg class="chat-launcher-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            <svg class="chat-launcher-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+
+    <script src="chat/chat.js"></script>
 </body>
 </html>
